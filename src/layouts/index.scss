@@ -1,0 +1,20 @@
+@import "reset.scss";
+@import "grid-settings.scss";
+@import "components/components";
+@import "variables/variables";
+
+html {
+  margin: 0px auto;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('/images/debut_light.png') repeat;
+}
+
+body {
+  font-family: var(--base-font);
+  line-height: 1.4;
+  color: var(--base-colour);
+  margin: 0px auto;
+}
