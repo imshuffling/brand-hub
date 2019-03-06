@@ -1,18 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
-
 :root {
   --base-font:  'Source Sans Pro', sans-serif;
   font-size: calc(1rem + ((1vw - 0.3rem) * 0.2222));
   --base-colour: #393531;
-  --padding-under: 15px;
+  --padding-under: 30px;
   --orange: #EE4938;
 
   @include breakpoint(medium) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   @include breakpoint(large) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 

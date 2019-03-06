@@ -1,31 +1,29 @@
 module.exports = {
   siteMetadata: {
-    title: 'Brand Hub microsite',
+    title: 'Brand Hub - David Riches',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "Brand Hub",
-        short_name: "brandhub",
+        short_name: "brandhub.davidrich.es",
         start_url: "/",
         background_color: "#ffffff",
-        theme_color: "#ee4938",
+        theme_color: "#EE4938",
         display: "minimal-ui",
-        icons: [
-          {
-            src: `/favicons/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/favicons/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
+        icon: `src/images/icon.png`,
       },
     },
     `gatsby-plugin-offline`,

@@ -1,31 +1,9 @@
 import React from "react"
-import favicon from './favicon.gif'
+import favicon from './images/icon.png'
+import PropTypes from "prop-types"
 
-let stylesStr
-if (process.env.NODE_ENV === `production`) {
-  try {
-    stylesStr = require(`!raw-loader!../public/styles.css`)
-  } catch (e) {
-    console.log(e)
-  }
-}
-
-exports.onRouteUpdate = ({ location }) => {
-  console.log('new pathname', location.pathname)
-}
-
-module.exports = class HTML extends React.Component {
+export default class HTML extends React.Component {
   render() {
-    let css
-    if (process.env.NODE_ENV === `production`) {
-      css = (
-        <style
-          id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: stylesStr }}
-        />
-
-      )
-    }
     return (
       <html lang="en">
         <head>
@@ -35,11 +13,11 @@ module.exports = class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <meta name="theme-color" content="#3F00B6" />
+          <meta name="theme-color" content="#EE4938" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <link rel="shortcut icon" type="image/png" href={favicon} />
+          <link rel="apple-touch-icon" href={favicon} />
           {this.props.headComponents}
-          {css}
           <noscript>Your browser does not support JavaScript!</noscript>
         </head>
         <body {...this.props.bodyAttributes}>
@@ -54,4 +32,13 @@ module.exports = class HTML extends React.Component {
       </html>
     )
   }
+}
+
+HTML.propTypes = {
+  htmlAttributes: PropTypes.object,
+  headComponents: PropTypes.array,
+  bodyAttributes: PropTypes.object,
+  preBodyComponents: PropTypes.array,
+  body: PropTypes.string,
+  postBodyComponents: PropTypes.array,
 }

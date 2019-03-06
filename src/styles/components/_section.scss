@@ -1,0 +1,24 @@
+.wrapper {
+  margin: 0px auto;
+  padding: 15px;
+  @include breakpoint(medium) {
+    max-width: 1400px;
+    padding: 30px;
+  }
+}
+
+section {
+  padding: 30px 0 100px 0;
+}
+
+.gatsby-image-wrapper {
+  box-shadow: 1px 1px 9px #ccc;
+  margin-top: var(--padding-under);
+  display: block;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 30px;
+}

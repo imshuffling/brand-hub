@@ -9,7 +9,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('/images/debut_light.png') repeat;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,4 +17,6 @@ body {
   line-height: 1.4;
   color: var(--base-colour);
   margin: 0px auto;
+  background: white;
+  border-top: 3px solid var(--orange);
 }
