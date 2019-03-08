@@ -1,1 +1,2 @@
-require('typeface-source-sans-pro')
+require('typeface-pt-sans')
+require('typeface-open-sans')
