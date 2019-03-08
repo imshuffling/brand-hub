@@ -1,0 +1,71 @@
+:root {
+  --base-font:  'Source Sans Pro', sans-serif;
+  font-size: calc(1rem + ((1vw - 0.3rem) * 0.2222));
+  --base-colour: #393531;
+  --padding-under: 30px;
+  --orange: #EE4938;
+
+  @include breakpoint(medium) {
+    font-size: 1.2rem;
+  }
+
+  @include breakpoint(large) {
+    font-size: 1.4rem;
+  }
+}
+
+::selection {
+  background-color: var(--orange);
+  color: #fff;
+}
+
+h1 {
+  font-size: calc(2.375rem + ((1vw - 0.3em) * 1.1111));
+  margin-bottom: var(--padding-under);
+  @include breakpoint(large) {
+    font-size: 4.375em;
+    line-height: 1.2;
+  }
+}
+
+h2 {
+  font-size: calc(1.5rem + ((1vw - 0.3em) * 0.5556));
+  margin-bottom: var(--padding-under);
+  @include breakpoint(large) {
+    font-size: 2.000em;
+  }
+}
+
+h3 {
+  font-size: calc(1.3rem + ((1vw - 0.3em) * 0.2222));
+  margin-bottom: var(--padding-under);
+    @include breakpoint(large) {
+      font-size: 1.500em;
+    }
+}
+
+h4 {
+  font-size: calc(1.2rem + ((1vw - 0.3em) * 0.2222));
+  margin-bottom: var(--padding-under);
+    @include breakpoint(large) {
+      font-size: 1.400em;
+    }
+}
+
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+p {
+  margin-bottom: var(--padding-under);
+}
+
+ul, ol {
+  margin-bottom: var(--padding-under);
+  list-style-position: inside;
+}
+
+a {
+  color: var(--orange);
+}

@@ -1,23 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const HeaderWrapper = styled.header`
-  grid-area: header;
-  align-self: top;
-`
-const Logo = styled.div`
-  font-family: var(--logo);
-  font-weight: bold;
-  padding: 30px 0;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: -.5px;
-`
+import logo from '../logo.png';
 
 const Header = () => (
-  <HeaderWrapper>
-    <Logo>Darkness.</Logo>
-  </HeaderWrapper>
+  <header>
+    <img className="logo" src={logo} alt="Brand Hub logo" />
+  </header>
 )
 
 export default Header

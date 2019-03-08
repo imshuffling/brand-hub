@@ -1,18 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: 'Darkness. by David Riches',
+    title: 'Brand Hub - David Riches',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Darkness",
-        short_name: "darkness.davidrich.es",
+        name: "Brand Hub",
+        short_name: "brandhub.davidrich.es",
         start_url: "/",
-        background_color: "#262626",
-        theme_color: "#262626",
+        background_color: "#ffffff",
+        theme_color: "#EE4938",
         display: "minimal-ui",
         icon: `src/images/icon.png`,
       },
