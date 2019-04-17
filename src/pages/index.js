@@ -2,41 +2,79 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from "../components/layout.js"
 import Img from 'gatsby-image'
+import logo from '../logo.png'
+// import dent from '../dent.svg'
+// import dentPrimary from '../dent-primary.svg'
+// import dentLight from '../dent-light.svg'
 
 const IndexPage = (props) => (
   <Layout>
-    <section>
-      <h3>Placeholder website for brand-hub.co.uk</h3>
-      <strong>The Brief</strong>
-      <p>Provide a web based solution for a startup marketing company.</p>
-      <strong>What I delivered</strong>
-      <p>Branding, UX &amp; Website (Drupal 7 CMS with Omega templating engine).</p>
-    </section>
-    <section>
-      <h5>Branding concept phase</h5>
-      <p>Working with the client rapidly prototyping different logo designs.</p>
-      <div className="grid-2">
-        <div>
-          <strong>Concept 1</strong>
-          <Img fluid={props.data.imageOne.childImageSharp.fluid} />
-        </div>
-        <div>
-          <strong>Concept 2</strong>
-          <Img fluid={props.data.imageTwo.childImageSharp.fluid} />
+    <section className="hero clearfix dent-container light">
+      <div className="dent-cover">
+        <div className="contain">
+          <span className="label green"></span>
+          <h1 className="landing-descend"><img alt="brand hub logo" src={logo} /></h1>
+          <h3>In memory of brand-hub.co.uk</h3>
         </div>
       </div>
     </section>
-    <section>
-      <h5>Draft Homepage</h5>
-      <p>Client settled for branding and overral layout, below in a screenshot in development.</p>
-      <Img fluid={props.data.imageSix.childImageSharp.fluid} />
-    </section>
-    <section>
-      <h5>Contact page</h5>
-      <p>2 column layout with built in form.</p>
-      <Img fluid={props.data.imageFour.childImageSharp.fluid} />
-    </section>
-    <p><a href="https://davidrich.es" rel="noopener">Back to davidrich.es</a></p>
+
+    <section className="size dent-container">
+		<div className="dent-cover">
+			<div className="contain">
+        <h2>The Brief</h2>
+        <p>Provide a web based solution for a startup marketing company.</p>
+        <strong>What I delivered</strong>
+        <p>Branding, UX &amp; Website (Drupal 7 CMS with Omega templating engine).</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section className="features dent-container light">
+		<div className="dent-cover">
+			<div className="contain">
+        <h2>Draft Homepage</h2>
+        <p>Client settled for branding and overral layout, below in a screenshot in development.</p>
+        <Img fluid={props.data.imageSix.childImageSharp.fluid} />
+			</div>
+		</div>
+	</section>
+
+  <section class="boilerplate bg dent-container">
+		<div class="dent-cover">
+			<div class="contain">
+        <h2>Branding concept phase</h2>
+        <p>Working with the client rapidly prototyping different logo designs.</p>
+        <div className="grid-2">
+          <div>
+            <strong>Concept 1</strong>
+            <Img fluid={props.data.imageOne.childImageSharp.fluid} />
+          </div>
+          <div>
+            <strong>Concept 2</strong>
+            <Img fluid={props.data.imageTwo.childImageSharp.fluid} />
+          </div>
+        </div>
+      </div>
+		</div>
+	</section>
+
+  <section className="boilerplate bg dent-container light">
+		<div className="dent-cover">
+			<div className="contain">
+        <h2>Contact page</h2>
+        <p>2 column layout with built in form.</p>
+        <Img fluid={props.data.imageFour.childImageSharp.fluid} />
+			</div>
+		</div>
+	</section>
+
+  <section>
+    <div className="contain">
+      <p><a href="https://davidrich.es" rel="noopener">Back to davidrich.es</a></p>
+    </div>
+  </section>
   </Layout>
 )
 

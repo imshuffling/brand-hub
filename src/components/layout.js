@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
-import Header from '../components/header'
+// import Header from '../components/header'
 import '../styles/index.scss'
 
 class Layout extends Component {
@@ -15,7 +15,7 @@ class Layout extends Component {
             { name: 'keywords', content: 'Brand Hub London, Brand Hub' },
           ]}
         />
-        <Header />
+        {/* <Header /> */}
           {children}
       </div>
     )
