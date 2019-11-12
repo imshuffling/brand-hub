@@ -3,9 +3,6 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout.js"
 import Img from 'gatsby-image'
 import logo from '../logo.png'
-// import dent from '../dent.svg'
-// import dentPrimary from '../dent-primary.svg'
-// import dentLight from '../dent-light.svg'
 
 const IndexPage = (props) => (
   <Layout>
