@@ -20,18 +20,6 @@
 }
 
 .dent-container {
-
-  --center: 50vh;
-  --ascend: 10.613vw;
-  height: calc(var(--center) + var(--ascend));
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% calc(var(--center) - var(--ascend)),
-    0 calc(var(--center) + var(--ascend))
-  );
-
-
   color: white;
   background-color: transparent;
   padding: 0;
